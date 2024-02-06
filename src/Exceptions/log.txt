@@ -1,0 +1,8 @@
+Fecha y hora: 2024-02-05T20:58:38.491303100
+Tipo de excepcion: Exceptions.NegativaSideValuesException
+Mensaje de la excepcion: One of the sides has a negative value
+Exceptions.NegativaSideValuesException: One of the sides has a negative value
+	at Triangle.Triangle.hasNegativeValue(Triangle.java:92)
+	at Triangle.Triangle.<init>(Triangle.java:18)
+	at App.main(App.java:5)
+------------------------------------------------------
