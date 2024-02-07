@@ -48,6 +48,14 @@ public class TriangleTest {
     public void tearDown() {
         
     }
+
+    @Test
+    public void testTriangle1() {
+        Triangle triangle = new Triangle(3.0, 4.0, 5.0);
+        Assertions.assertEquals(3.0, triangle.getSide1(), 0.001);
+        Assertions.assertEquals(4.0, triangle.getSide2(), 0.001);
+        Assertions.assertEquals(5.0, triangle.getSide3(), 0.001);
+    }
         
     @Test
     public void testSetType1() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativeSideValuesException {
