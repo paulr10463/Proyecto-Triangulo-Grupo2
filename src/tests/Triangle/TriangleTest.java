@@ -27,10 +27,11 @@ public class TriangleTest {
     final String scaleneType = "Escaleno";
     
     final String HAS_CERO_AS_VALUE_MSG = "No puede tener un lado con valor 0";
-
+    final String NEGATIVE_VALUES_MSG = "No se permiten valores negativos";
+    final String INVALID_TRIANGLE_MSG = "No es un triangulo valido";
     @BeforeAll
     public static void setUpClass() {
-
+    	
     }
 
     @AfterAll
@@ -76,6 +77,34 @@ public class TriangleTest {
     public void testSetType5() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativeSideValuesException {
         Triangle triangle = new Triangle(scaleneSide1, scaleneSide2, scaleneSide3);
         Assertions.assertEquals(scaleneType, triangle.getType());
+    }
+    
+    @Test
+    public void testIsValidTriangleValidTriangle() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativeSideValuesException {
+        Triangle triangle = new Triangle(scaleneSide1, scaleneSide2, scaleneSide3);
+        Assertions.assertTrue(triangle.isValidTriangle());
+    }
+
+    @Test
+    public void testIsValidTriangleInvalidTriangle() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativeSideValuesException {
+        TriangleNotPossibleException exception = Assertions.assertThrows(TriangleNotPossibleException.class, () -> {
+            new Triangle(isoscelesSide1, isoscelesSide1, LARGE_SIDE_VALUE).isValidTriangle();
+        });
+        Assertions.assertEquals(INVALID_TRIANGLE_MSG, exception.getMessage());
+    }
+
+    @Test
+    public void testHasNegativeValueWithNegativeValues() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativeSideValuesException {
+    		NegativeSideValuesException exception = Assertions.assertThrows(NegativeSideValuesException.class, () -> {
+            	new Triangle(NEGATIVE_SIDE_VALUE, scaleneSide2, scaleneSide3);
+            });
+            Assertions.assertEquals(NEGATIVE_VALUES_MSG, exception.getMessage());
+    }
+
+    @Test
+    public void testHasNegativeValueWithoutNegativeValues() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativeSideValuesException {
+         Triangle triangle = new Triangle(scaleneSide1, scaleneSide2, scaleneSide3);
+         Assertions.assertFalse(triangle.hasNegativeValue());
     }
 }
     
