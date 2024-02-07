@@ -50,7 +50,7 @@ public class TriangleTest {
     }
 
     @Test
-    public void testTriangle1() {
+    public void testTriangle1() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativeSideValuesException {
         Triangle triangle = new Triangle(3.0, 4.0, 5.0);
         Assertions.assertEquals(3.0, triangle.getSide1(), 0.001);
         Assertions.assertEquals(4.0, triangle.getSide2(), 0.001);
