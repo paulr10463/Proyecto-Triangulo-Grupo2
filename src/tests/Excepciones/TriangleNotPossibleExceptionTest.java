@@ -9,7 +9,7 @@ import Triangle.Triangle;
 public class TriangleNotPossibleExceptionTest {
 
     final String IS_VALID_TRIANGLE_MSG = "No es un triangulo valido";
-    final double VALID_SIDE_VALUE = 1.0;
+    final double VALID_SIDE_VALUE = 100.0;
     final double equilaterialSide = 3.0;
 
     @Test
