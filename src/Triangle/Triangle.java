@@ -65,36 +65,24 @@ public class Triangle {
     }
 
     public boolean isValidTriangle() throws TriangleNotPossibleException {
-        try {
-            if (this.side1 + this.side2 > this.side3 && this.side1 + this.side3 > this.side2 && this.side2 + this.side3 > this.side1) {
-                return true;
-            } 
-            throw new TriangleNotPossibleException("The given sides do not form a valid triangle");
-        } catch (TriangleNotPossibleException e) {
-            throw e;
-        }
+        if (this.side1 + this.side2 > this.side3 && this.side1 + this.side3 > this.side2 && this.side2 + this.side3 > this.side1) 
+            return true;
+            
+        return false;
     }
 
     public boolean hasCeroAsValue() throws SideWithCeroAsValueException {
-        try {
-            if (this.side1 == 0 || this.side2 == 0 || this.side3 == 0) {
-                throw new SideWithCeroAsValueException("One of the sides has zero as value");
-            }
-            return false;
-        } catch (SideWithCeroAsValueException e) {
-            throw e;
-        }
+        if (this.side1 == 0 || this.side2 == 0 || this.side3 == 0) 
+            return true;
+        
+        return false;
     }
 
     public boolean hasNegativeValue() throws NegativaSideValuesException {
-        try {
-            if (this.side1 < 0 || this.side2 < 0 || this.side3 < 0) {
-                throw new NegativaSideValuesException("One of the sides has a negative value");
-            }
-            return false;
-        } catch (NegativaSideValuesException e) {
-            throw e;
-        }
+        if (this.side1 < 0 || this.side2 < 0 || this.side3 < 0) 
+            return true;
+        
+        return false;
     }
 
     public double getArea() {

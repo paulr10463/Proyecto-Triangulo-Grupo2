@@ -5,5 +5,5 @@
 - Jairo Simbaña
 - David Yánez
 
-### Notas:
+### Ejecutar pruebas:
 Una vez instalada la librería de junit incluir el classpath "test-lib\junit-platform-console-standalone-1.10.2.jar" en "Referenced libraries" en la configuración del proyecto.
