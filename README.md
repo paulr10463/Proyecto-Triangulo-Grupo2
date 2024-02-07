@@ -1,18 +1,9 @@
-## Getting Started
+# TAREA 16 - CONSTRUCCION Y EVOL. DEL SW
+### GRUPO 2
+### Integrantes:
+- Paul Román
+- Jairo Simbaña
+- David Yánez
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Notas:
+Una vez instalada la librería de junit incluir el classpath "test-lib\junit-platform-console-standalone-1.10.2.jar" en "Referenced libraries" en la configuración del proyecto.
