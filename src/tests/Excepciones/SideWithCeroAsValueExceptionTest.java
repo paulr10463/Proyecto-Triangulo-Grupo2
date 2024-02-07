@@ -2,7 +2,7 @@ package tests.Excepciones;
 
 import org.junit.jupiter.api.*;
 
-import Exceptions.NegativaSideValuesException;
+import Exceptions.NegativeSideValuesException;
 import Exceptions.SideWithCeroAsValueException;
 import Exceptions.TriangleNotPossibleException;
 import Triangle.Triangle;  
@@ -14,7 +14,7 @@ public class SideWithCeroAsValueExceptionTest {
     final double equilaterialSide = 3.0;
 
     @Test
-    public void testSideWithCeroAsValueExceptionTest() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativaSideValuesException{
+    public void testSideWithCeroAsValueExceptionTest() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativeSideValuesException{
         SideWithCeroAsValueException excepcionEsperada = Assertions.assertThrows(SideWithCeroAsValueException.class, ()->new Triangle(CERO_SIDE_VALUE, equilaterialSide, equilaterialSide));
         Assertions.assertEquals(HAS_CERO_AS_VALUE_MSG, excepcionEsperada.getMessage());
     }

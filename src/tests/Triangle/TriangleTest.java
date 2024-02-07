@@ -2,7 +2,7 @@ package tests.Triangle;
 
 import org.junit.jupiter.api.*;
 
-import Exceptions.NegativaSideValuesException;
+import Exceptions.NegativeSideValuesException;
 import Exceptions.SideWithCeroAsValueException;
 import Exceptions.TriangleNotPossibleException;
 import Triangle.Triangle;
@@ -39,7 +39,7 @@ public class TriangleTest {
     }
     
     @BeforeEach
-    public void setUp() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativaSideValuesException{
+    public void setUp() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativeSideValuesException{
     
     }
 
@@ -49,31 +49,31 @@ public class TriangleTest {
     }
         
     @Test
-    public void testSetType1() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativaSideValuesException {
+    public void testSetType1() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativeSideValuesException {
         Triangle triangle = new Triangle(equilaterialSide, equilaterialSide, equilaterialSide);
         Assertions.assertEquals(equilateralType, triangle.getType());
     }
 
     @Test
-    public void testSetType2() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativaSideValuesException {
+    public void testSetType2() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativeSideValuesException {
         Triangle triangle = new Triangle(isoscelesSide1, isoscelesSide1, isoscelesSide2);
         Assertions.assertEquals(isoscelesType, triangle.getType());
     }
 
     @Test
-    public void testSetType3() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativaSideValuesException {
+    public void testSetType3() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativeSideValuesException {
         Triangle triangle = new Triangle(isoscelesSide1, isoscelesSide2, isoscelesSide1);
         Assertions.assertEquals(isoscelesType, triangle.getType());
     }
 
     @Test
-    public void testSetType4() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativaSideValuesException {
+    public void testSetType4() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativeSideValuesException {
         Triangle triangle = new Triangle(isoscelesSide1, isoscelesSide2, isoscelesSide2);
         Assertions.assertEquals(isoscelesType, triangle.getType());
     }
 
     @Test
-    public void testSetType5() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativaSideValuesException {
+    public void testSetType5() throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativeSideValuesException {
         Triangle triangle = new Triangle(scaleneSide1, scaleneSide2, scaleneSide3);
         Assertions.assertEquals(scaleneType, triangle.getType());
     }

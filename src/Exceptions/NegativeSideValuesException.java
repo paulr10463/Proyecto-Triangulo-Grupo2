@@ -4,8 +4,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class NegativaSideValuesException extends Exception {
-    public NegativaSideValuesException(String message) {
+public class NegativeSideValuesException extends Exception {
+    public NegativeSideValuesException(String message) {
         super(message);
         logExcepcion(this); 
     }

@@ -1,7 +1,6 @@
-
 package Triangle;
 
-import Exceptions.NegativaSideValuesException;
+import Exceptions.NegativeSideValuesException;
 import Exceptions.SideWithCeroAsValueException;
 import Exceptions.TriangleNotPossibleException;
 
@@ -11,12 +10,12 @@ public class Triangle {
     private double side3;
     private String type;
 
-    public Triangle(double side1,double side2,double side3) throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativaSideValuesException {
+    public Triangle(double side1,double side2,double side3) throws TriangleNotPossibleException, SideWithCeroAsValueException, NegativeSideValuesException {
         this.side1 = side1;
         this.side2 = side2;
         this.side3 = side3;
         if (hasNegativeValue())
-            throw new NegativaSideValuesException("No se permiten valores negativos");
+            throw new NegativeSideValuesException("No se permiten valores negativos");
         if (hasCeroAsValue())
             throw new SideWithCeroAsValueException("No puede tener un lado con valor 0");
         if (!isValidTriangle())
@@ -67,7 +66,7 @@ public class Triangle {
     public boolean isValidTriangle() throws TriangleNotPossibleException {
         if (this.side1 + this.side2 > this.side3 && this.side1 + this.side3 > this.side2 && this.side2 + this.side3 > this.side1) 
             return true;
-            
+
         return false;
     }
 
@@ -78,7 +77,7 @@ public class Triangle {
         return false;
     }
 
-    public boolean hasNegativeValue() throws NegativaSideValuesException {
+    public boolean hasNegativeValue() throws NegativeSideValuesException {
         if (this.side1 < 0 || this.side2 < 0 || this.side3 < 0) 
             return true;
         
