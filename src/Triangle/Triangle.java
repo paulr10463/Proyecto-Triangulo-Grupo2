@@ -85,8 +85,9 @@ public class Triangle {
         return false;
     }
 
+
     public double getArea() {
-        double s = (this.side1 + this.side2 + this.side3) / 2;
+        double s = (this.side1 + this.side2 + this.side3) / 2; // Semiperímetro
         return Math.sqrt(s * (s - this.side1) * (s - this.side2) * (s - this.side3));
     }
 
